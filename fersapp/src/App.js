@@ -1,23 +1,16 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
+import Header from "./pages/components/header/Header";
+import LandingPage from "./pages/landing-page/LandingPage";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="Header">
-        <div className="Header-left">
-          <div className="Header-logo">Federal returns calculator</div>
-        </div>
-        <div className="Header-right">
-          <div className="Header-sign__in">Sign In</div>
-          <Button variant="contained" color="primary">
-            Get Started
-          </Button>
-        </div>
+      <header>
+        <Header />
       </header>
       <body>
-        <div>HELLo</div>
+        <LandingPage />
       </body>
     </div>
   );

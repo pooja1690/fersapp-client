@@ -1,0 +1,28 @@
+.Header {
+  background-color: #282c34;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 0px 15px 0px 15px;
+}
+
+.Header-logo {
+  float: left;
+}
+
+.Header-left {
+}
+
+.Header-right {
+  display: inherit;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 220px;
+  font-size: calc(5px + 2vmin);
+  color: white;
+}
