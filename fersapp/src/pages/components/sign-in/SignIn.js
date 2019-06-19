@@ -24,7 +24,7 @@ function SignIn() {
         />
         <TextField
           id="standard-password-input"
-          label="New Password"
+          label="Password"
           type="password"
           margin="normal"
         />
