@@ -1,0 +1,19 @@
+.fersapp-reasons {
+  display: flex;
+  flex-direction: row;
+  padding: 7rem;
+  background-color: #ba877740;
+  height: calc(70vh - 80px);
+  justify-content: space-between;
+}
+.image__placement {
+  width: 200px;
+  height: 200px;
+}
+
+.reasons__content, .reasons__button {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
