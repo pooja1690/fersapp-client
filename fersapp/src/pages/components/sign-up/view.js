@@ -5,9 +5,9 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import "./SignUp.css"
+import "./styles.css";
 
-function SignUp() {
+const SignUpView = props => {
   return (
     <div>
       <DialogTitle id="form-dialog-title">Sign Up</DialogTitle>
@@ -22,7 +22,10 @@ function SignUp() {
           id="name"
           label="Email Address"
           type="email"
-          fullWidth
+          fullWidth={true}
+          error={props.emailHelperText ? true : false}
+          helperText={props.emailHelperText}
+          onChange={props.emailAddressHandler}
         />
         <div className="Signup-password-input">
           <TextField
@@ -30,21 +33,31 @@ function SignUp() {
             label="New Password"
             type="password"
             margin="normal"
+            onChange={props.newPasswordHandler}
+            error={props.passwordHelperText ? true : false}
+            helperText={props.passwordHelperText}
           />
           <TextField
             id="standard-password-input__confirm"
             label="Confirm Password"
             type="password"
             margin="normal"
+            onChange={props.confirmPasswordHandler}
+            error={props.passwordHelperText ? true : false}
+            helperText={props.passwordHelperText}
           />
         </div>
       </DialogContent>
       <DialogActions>
-        <Button color="primary">Cancel</Button>
-        <Button color="primary">Subscribe</Button>
+        <Button color="primary" onClick={props.cancelHandler}>
+          Cancel
+        </Button>
+        <Button color="primary" onClick={props.submitHandler}>
+          Sign Up
+        </Button>
       </DialogActions>
     </div>
   );
-}
+};
 
-export default SignUp;
+export default SignUpView;

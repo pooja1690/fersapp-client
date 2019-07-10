@@ -30,7 +30,7 @@ function LandingPage() {
           variant="contained"
           color="secondary"
           size="large"
-          fullWidth="false"
+          fullWidth={false}
           aria-label="Large contained secondary button"
         >
           Calculate Now!

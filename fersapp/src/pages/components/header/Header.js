@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import SignUp from "../sign-up/SignUp";
+import SignUp from "../sign-up";
 import SignIn from "../sign-in/SignIn";
 import "./Header.css";
 
