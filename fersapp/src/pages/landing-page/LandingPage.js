@@ -2,6 +2,7 @@ import React from "react";
 import "./LandingPage.css";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
@@ -26,15 +27,17 @@ function LandingPage() {
         </div>
       </div>
       <div className="reasons__button">
-        <Button
-          variant="contained"
-          color="secondary"
-          size="large"
-          fullWidth={false}
-          aria-label="Large contained secondary button"
-        >
-          Calculate Now!
-        </Button>
+        <Link to="/userform">
+          <Button
+            variant="contained"
+            color="secondary"
+            size="large"
+            fullWidth={false}
+            aria-label="Large contained secondary button"
+          >
+            Calculate Now!
+          </Button>
+        </Link>
       </div>
     </div>
   );

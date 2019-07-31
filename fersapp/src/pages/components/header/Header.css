@@ -1,23 +1,23 @@
-.Header {
+.header-panel {
   background-color: #282c34;
-  height: 80px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  height: 40vh;
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 0px 15px 0px 15px;
 }
 
-.Header-logo {
+.header-content {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo {
   float: left;
 }
 
-.Header-left {
-}
-
-.Header-right {
+.header-right {
   display: inherit;
   flex-direction: row;
   align-items: center;

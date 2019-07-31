@@ -27,29 +27,35 @@ function Header() {
   }
 
   return (
-    <div className="Header">
-      <div className="Header-left">
-        <div className="Header-logo">Federal returns calculator</div>
-      </div>
-      <div className="Header-right">
-        <Button variant="text" color="inherit" onClick={handleClickOpenSignIn}>
-          Sign In
-        </Button>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={handleClickOpenSignUp}
-        >
-          Get Started
-        </Button>
-        <Dialog
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="form-dialog-title"
-        >
-          {signUp && <SignUp />}
-          {signIn && <SignIn />}
-        </Dialog>
+    <div className="header-panel">
+      <div className="header-content">
+        <div className="header-left">
+          <div className="header-logo">Federal returns calculator</div>
+        </div>
+        <div className="header-right">
+          <Button
+            variant="text"
+            color="inherit"
+            onClick={handleClickOpenSignIn}
+          >
+            Sign In
+          </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleClickOpenSignUp}
+          >
+            Get Started
+          </Button>
+          <Dialog
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="form-dialog-title"
+          >
+            {signUp && <SignUp />}
+            {signIn && <SignIn />}
+          </Dialog>
+        </div>
       </div>
     </div>
   );
