@@ -3,6 +3,7 @@ import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import SignUp from "../sign-up";
 import SignIn from "../sign-in/SignIn";
+import Typography from "@material-ui/core/Typography";
 import "./Header.css";
 
 function Header() {
@@ -30,7 +31,11 @@ function Header() {
     <div className="header-panel">
       <div className="header-content">
         <div className="header-left">
-          <div className="header-logo">Federal returns calculator</div>
+          <div className="header-logo">
+            <Typography variant="h6">
+              Federal Returns Calculator
+            </Typography>
+          </div>
         </div>
         <div className="header-right">
           <Button
