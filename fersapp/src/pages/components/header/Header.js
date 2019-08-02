@@ -33,7 +33,7 @@ function Header() {
         <div className="header-left">
           <div className="header-logo">
             <Typography variant="h6">
-              Federal Returns Calculator
+              FeRs App
             </Typography>
           </div>
         </div>
