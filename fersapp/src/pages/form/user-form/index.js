@@ -1,14 +1,22 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
 import TermsAndConditions from "../../terms-conditions";
-import Container from "../container";
-const terms = false;
+import { steps } from "./main";
+import MultiStep from "react-multistep";
+
+const terms = true;
 
 function UserForm() {
   return (
     <div>
-      <TermsAndConditions />
+      {!terms ? (
+        <TermsAndConditions />
+      ) : (
+        <div className="container">
+          <div>
+            <MultiStep showNavigation={true} steps={steps} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

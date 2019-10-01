@@ -1,5 +1,5 @@
 .header-panel {
-  background-color: #282c34;
+  background-color: #ffb246;
   height: 40vh;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -15,6 +15,10 @@
 }
 .header-logo {
   float: left;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid;
+  padding: 8px;
 }
 
 .header-right {

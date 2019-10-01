@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./pages/components/header/Header";
 import LandingPage from "./pages/landing-page/LandingPage";
 import TermsAndConditions from "./pages/terms-conditions";
