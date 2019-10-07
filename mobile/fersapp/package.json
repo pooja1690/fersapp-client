@@ -10,8 +10,13 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "cross-fetch": "^3.0.4",
+    "mirror-creator": "^1.1.0",
     "react": "16.9.0",
-    "react-native": "0.61.1"
+    "react-native": "0.61.1",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

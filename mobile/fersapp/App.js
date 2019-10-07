@@ -10,105 +10,99 @@ import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
   Text,
   StatusBar,
+  TouchableOpacity,
 } from 'react-native';
+import {Colors} from './src/lib/Colors';
+import SignInContainer from './src/sign-in/container';
+import {createStore, applyMiddleware} from 'redux';
+import {Provider} from 'react-redux';
+import thunk from 'redux-thunk';
+import rootReducer from './reducer';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+//#09b996
 
 const App: () => React$Node = () => {
   return (
-    <>
+    <Provider store={store}>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
+      <SafeAreaView style={styles.background}>
+        <View style={styles.content}>
+          <View style={styles.header}>
+            <Text style={styles.headerTitle}>Federal Returns</Text>
+            <Text style={styles.headerTitle}>Calculator</Text>
           </View>
-        </ScrollView>
+
+          <View style={styles.signInContent}>
+            <SignInContainer />
+          </View>
+          <TouchableOpacity>
+            <Text styles={styles.termsConditions}>Terms and Conditions</Text>
+          </TouchableOpacity>
+        </View>
       </SafeAreaView>
-    </>
+    </Provider>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  background: {
+    height: '100%',
+    width: '100%',
+    backgroundColor: Colors.homeGreen,
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
+  content: {
+    color: Colors.white,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height: '100%',
   },
-  body: {
-    backgroundColor: Colors.white,
+  header: {
+    alignItems: 'center',
+    top: 100,
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  headerTitle: {
+    color: Colors.white,
+    fontSize: 35,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  termsConditions: {
+    color: Colors.white,
   },
 });
 
 export default App;
+
+{
+  /* <View style={styles.body}>
+          <View style={styles.sectionContainer}>
+            <Text style={styles.sectionTitle}>Step One</Text>
+            <Text style={styles.sectionDescription}>
+              Edit <Text style={styles.highlight}>App.js</Text> to change this
+              screen and then come back to see your edits.
+            </Text>
+          </View>
+          <View style={styles.sectionContainer}>
+            <Text style={styles.sectionTitle}>See Your Changes</Text>
+            <Text style={styles.sectionDescription}>
+              <ReloadInstructions />
+            </Text>
+          </View>
+          <View style={styles.sectionContainer}>
+            <Text style={styles.sectionTitle}>Debug</Text>
+            <Text style={styles.sectionDescription}>
+              <DebugInstructions />
+            </Text>
+          </View>
+          <View style={styles.sectionContainer}>
+            <Text style={styles.sectionTitle}>Learn More</Text>
+            <Text style={styles.sectionDescription}>
+              Read the docs to discover what to do next:
+            </Text>
+          </View> */
+}
