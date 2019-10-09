@@ -8,15 +8,10 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  View,
-  Text,
   StatusBar,
-  TouchableOpacity,
 } from 'react-native';
-import {Colors} from './src/lib/Colors';
-import SignInContainer from './src/sign-in/container';
+import Main from './src/main';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
@@ -30,51 +25,10 @@ const App: () => React$Node = () => {
   return (
     <Provider store={store}>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={styles.background}>
-        <View style={styles.content}>
-          <View style={styles.header}>
-            <Text style={styles.headerTitle}>Federal Returns</Text>
-            <Text style={styles.headerTitle}>Calculator</Text>
-          </View>
-
-          <View style={styles.signInContent}>
-            <SignInContainer />
-          </View>
-          <TouchableOpacity>
-            <Text styles={styles.termsConditions}>Terms and Conditions</Text>
-          </TouchableOpacity>
-        </View>
-      </SafeAreaView>
+      <Main />
     </Provider>
   );
 };
-
-const styles = StyleSheet.create({
-  background: {
-    height: '100%',
-    width: '100%',
-    backgroundColor: Colors.homeGreen,
-  },
-  content: {
-    color: Colors.white,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    height: '100%',
-  },
-  header: {
-    alignItems: 'center',
-    top: 100,
-  },
-  headerTitle: {
-    color: Colors.white,
-    fontSize: 35,
-  },
-  termsConditions: {
-    color: Colors.white,
-  },
-});
 
 export default App;
 
