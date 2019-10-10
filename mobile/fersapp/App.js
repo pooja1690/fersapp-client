@@ -7,19 +7,20 @@
  */
 
 import React from 'react';
-import {
-  StyleSheet,
-  StatusBar,
-} from 'react-native';
+import {StatusBar} from 'react-native';
 import Main from './src/main';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducer';
+import {composeWithDevTools} from 'redux-devtools-extension';
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
-
-//#09b996
+const initialState = {};
+const store = createStore(
+  rootReducer,
+  initialState,
+  composeWithDevTools(applyMiddleware(thunk)),
+);
 
 const App: () => React$Node = () => {
   return (

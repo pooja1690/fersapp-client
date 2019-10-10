@@ -10,7 +10,12 @@ import {
 import {Colors} from './lib/Colors';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import ScenarioBuilderContainer from './scenario-builder/container';
+import ScenarioBuilderContainer from './scenario-builder/name/container';
+import RequiredDatesContainer from './scenario-builder/required-dates/container';
+import SpecialProvisionContainer from './scenario-builder/special-provision/container';
+import MilitaryServiceContainer from './scenario-builder/military-service/container';
+import SalaryInfoContainer from './scenario-builder/salary-info/container';
+
 
 class MainScreen extends Component {
   static navigationOptions = {
@@ -33,8 +38,9 @@ class MainScreen extends Component {
         </View>
         <View style={styles.content}>
           <View style={styles.actionButtons}>
-            <TouchableOpacity style={[styles.newScenarioButton, styles.button]}
-            onPress={() => navigate('ScenarioBuilder')}>
+            <TouchableOpacity
+              style={[styles.newScenarioButton, styles.button]}
+              onPress={() => navigate('ScenarioBuilder')}>
               <Text style={styles.newScenarioText}>Build a new Scenario</Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -53,7 +59,14 @@ class MainScreen extends Component {
   }
 }
 const MainNavigator = createStackNavigator(
-  {Main: MainScreen, ScenarioBuilder: ScenarioBuilderContainer},
+  {
+    Main: MainScreen,
+    ScenarioBuilder: ScenarioBuilderContainer,
+    RequiredDates: RequiredDatesContainer,
+    SpecialProvision: SpecialProvisionContainer,
+    MilitaryService: MilitaryServiceContainer,
+    SalaryInfo: SalaryInfoContainer
+  },
   {
     initialRouteName: 'Main',
   },

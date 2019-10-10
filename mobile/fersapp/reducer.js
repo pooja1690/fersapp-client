@@ -1,12 +1,10 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
+import scenario from './src/scenario-builder/reducers';
 
-const rootReducer = (state = {}, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
+const reducers = {
+  scenario
 };
 
 export default combineReducers({
-  state: rootReducer,
+  ...reducers
 });

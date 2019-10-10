@@ -7,7 +7,9 @@ class TermsOfService extends Component {
   render() {
     return (
       <SafeAreaView style={styles.background}>
-        <TouchableOpacity style={{left: '90%'}} onPress={() => this.props.closeTermsModal()}>
+        <TouchableOpacity
+          style={{left: '90%'}}
+          onPress={() => this.props.closeTermsModal()}>
           <Text style={{fontSize: 30, color: Colors.white}}> X </Text>
         </TouchableOpacity>
         <View style={styles.content}>
@@ -31,7 +33,8 @@ class TermsOfService extends Component {
               related to, the use of the FERS Retirement Estimator. FERSHelp.com
               refers users to their agency’s retirement authority for actual
               annuity computations.
-              {'\n'}{'\n'}
+              {'\n'}
+              {'\n'}
               By using the FERS Retirement Estimator, you acknowledge that you
               have read and agree to this Disclaimer. FERSHelp.com provides the
               FERS Retirement Estimator as a service to help the user explore
@@ -78,7 +81,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     color: Colors.white,
     fontWeight: '600',
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   noteJustify: {
     fontSize: 15,

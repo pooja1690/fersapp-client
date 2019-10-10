@@ -10,7 +10,6 @@ class SignInContainer extends Component {
   }
 
   emailChange = e => {
-    console.log('email', e);
     this.setState({
       email: e,
     });
@@ -27,7 +26,6 @@ class SignInContainer extends Component {
 
   onSubmit = () => {
     if (this.validateEmail(this.state.email)) {
-      console.log('valid');
       if (this.state.password.length >= 6) {
         this.setState({
           error: '',

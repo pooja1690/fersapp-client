@@ -1,0 +1,17 @@
+export const scenarioTemplate = {
+  name: '',
+  dob: 0,
+  service_date: 0,
+  tentative_retirement_date: 0,
+  is_highrisk: false,
+  military_years: 0,
+  military_months: 0,
+  military_days: 0,
+  estimated_retirement_salary: 0,
+  estimated_retirement_3yr_avg_high: 0,
+  estimated_monthly_ssb: 0,
+  monthly_tsp_disbursement: 0,
+  unused_sick_leave_hours: 0,
+  unused_annual_leave_hours: 0,
+  current_biweekly_health_insurance_deduction: 0,
+};
