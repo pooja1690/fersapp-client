@@ -27,11 +27,11 @@ export const ScenarioBuilder = props => {
           />
         </View>
         <View style={{alignItems: 'center'}}>
-          <Text style={[styles.noteJustify, {paddingTop: 20}]}>
+          <Text style={[styles.noteJustify, {marginTop: 20}]}>
             By clicking Start Scenario, you agree to FERS Calculator
             <Text
-              onPress={() => props.renderTermsModal()}
-              style={{color: Colors.homeGreen}}>
+              style={{color: Colors.homeGreen}}
+              onPress={() => props.renderTermsModal()}>
               {' '}
               Terms of Service{' '}
             </Text>
