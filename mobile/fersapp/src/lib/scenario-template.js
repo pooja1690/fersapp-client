@@ -14,4 +14,11 @@ export const scenarioTemplate = {
   unused_sick_leave_hours: 0,
   unused_annual_leave_hours: 0,
   current_biweekly_health_insurance_deduction: 0,
+  survivor_benefit_option: 'none',
+  survivor_benefit_deductions: 0,
+  calculate_fegli_premiums: false,
+  fegli_basic_option: 'none',
+  fegli_additional_options: false,
+  fegli_option_b_salary_multiplier: 1,
+  fegli_option_c_dependent_multiplier: 1,
 };

@@ -25,7 +25,7 @@ export const MilitaryServiceTemplate = props => {
           </Text>
           <TextInput
             style={styles.textInput}
-            value={props.military_years}
+            value={`${props.military_years}`}
             onChangeText={e => props.updateMilitaryServiceYears(e)}
             keyboardType="numeric"
           />
@@ -35,7 +35,7 @@ export const MilitaryServiceTemplate = props => {
             Months
           </Text>
           <TextInput
-            value={props.military_months}
+            value={`${props.military_months}`}
             style={styles.textInput}
             onChangeText={e => props.updateMilitaryServiceMonths(e)}
             keyboardType="numeric"
@@ -44,14 +44,13 @@ export const MilitaryServiceTemplate = props => {
         <View>
           <Text style={[styles.description, {color: Colors.black}]}>Days</Text>
           <TextInput
-            value={props.military_days}
+            value={`${props.military_days}`}
             style={styles.textInput}
             onChangeText={e => props.updateMilitaryServiceDays(e)}
             keyboardType="numeric"
           />
         </View>
       </View>
-
       <View style={styles.submitContainer}>
         <TouchableOpacity
           style={[styles.primaryButton, styles.button]}

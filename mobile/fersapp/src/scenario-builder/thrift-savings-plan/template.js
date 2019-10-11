@@ -8,28 +8,19 @@ import {
 } from 'react-native';
 import {styles} from '../styles';
 
-export const SalaryInfoTemplate = props => {
+export const TSPTemplate = props => {
   return (
     <SafeAreaView style={styles.background}>
       <View style={styles.questionContainer}>
-        <Text style={styles.title}>Salary Information</Text>
+        <Text style={styles.title}>Thrift Savings Plan</Text>
         <Text style={[styles.description]}>
-          What do you estimate your annual salary will be when you retire?
+          How much do you anticipate withdrawing from your tsp each month during
+          retirement?
         </Text>
         <TextInput
           style={styles.textInput}
-          value={`${props.estimatedRetirementSalary}`}
-          onChangeText={e => props.updateEstimatedRetirementSalary(e)}
-          keyboardType="numeric"
-          placeholder={'$'}
-        />
-        <Text style={styles.description}>
-          What do you estimate your “high three” salary will be when you retire?
-        </Text>
-        <TextInput
-          value={`${props.estimatedRetirementHigh}`}
-          style={styles.textInput}
-          onChangeText={e => props.updateEstimatedRetirementHigh(e)}
+          value={`${props.monthlyTspDisbursement}`}
+          onChangeText={e => props.updateTspDisbursement(e)}
           keyboardType="numeric"
           placeholder={'$'}
         />

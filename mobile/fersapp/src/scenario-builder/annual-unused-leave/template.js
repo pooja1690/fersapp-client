@@ -8,30 +8,33 @@ import {
 } from 'react-native';
 import {styles} from '../styles';
 
-export const SalaryInfoTemplate = props => {
+export const AnnualUnusedLeaveTemplate = props => {
+
   return (
     <SafeAreaView style={styles.background}>
       <View style={styles.questionContainer}>
-        <Text style={styles.title}>Salary Information</Text>
+        <Text style={styles.title}>Sick and Annual Leave</Text>
         <Text style={[styles.description]}>
-          What do you estimate your annual salary will be when you retire?
+          How many unused sick leave hours do you expect to have when you
+          retire?
         </Text>
         <TextInput
           style={styles.textInput}
-          value={`${props.estimatedRetirementSalary}`}
-          onChangeText={e => props.updateEstimatedRetirementSalary(e)}
+          value={`${props.unusedSickLeaveHours}`}
+          onChangeText={e => props.updateAnnualSickUnusedLeave(e)}
           keyboardType="numeric"
-          placeholder={'$'}
+          placeholder={'hours'}
         />
         <Text style={styles.description}>
-          What do you estimate your “high three” salary will be when you retire?
+          How many unused annual leave hours do you expect to have when you
+          retire?
         </Text>
         <TextInput
-          value={`${props.estimatedRetirementHigh}`}
+          value={`${props.unusedAnnualLeaveHours}`}
           style={styles.textInput}
-          onChangeText={e => props.updateEstimatedRetirementHigh(e)}
+          onChangeText={e => props.updateAnnualUnusedLeave(e)}
           keyboardType="numeric"
-          placeholder={'$'}
+          placeholder={'hours'}
         />
       </View>
       <View style={styles.submitContainer}>

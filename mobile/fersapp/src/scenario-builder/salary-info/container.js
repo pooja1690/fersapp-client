@@ -27,7 +27,7 @@ class SalaryInfoContainer extends Component {
         estimatedRetirementHigh={
           this.props.scenario.estimated_retirement_3yr_avg_high
         }
-        onComplete={() => navigate('SpecialProvision')}
+        onComplete={() => navigate('SocialSecBenefit')}
       />
     );
   }

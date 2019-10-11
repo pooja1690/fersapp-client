@@ -8,28 +8,18 @@ import {
 } from 'react-native';
 import {styles} from '../styles';
 
-export const SalaryInfoTemplate = props => {
+export const SocialSecurityBenefitTemplate = props => {
   return (
     <SafeAreaView style={styles.background}>
       <View style={styles.questionContainer}>
-        <Text style={styles.title}>Salary Information</Text>
+        <Text style={styles.title}>Social Security Benefit</Text>
         <Text style={[styles.description]}>
-          What do you estimate your annual salary will be when you retire?
+          What is your estimated monthly social security benefit at age 62?
         </Text>
         <TextInput
           style={styles.textInput}
-          value={`${props.estimatedRetirementSalary}`}
-          onChangeText={e => props.updateEstimatedRetirementSalary(e)}
-          keyboardType="numeric"
-          placeholder={'$'}
-        />
-        <Text style={styles.description}>
-          What do you estimate your “high three” salary will be when you retire?
-        </Text>
-        <TextInput
-          value={`${props.estimatedRetirementHigh}`}
-          style={styles.textInput}
-          onChangeText={e => props.updateEstimatedRetirementHigh(e)}
+          value={`${props.estimatedSSB}`}
+          onChangeText={e => props.updateSocialSecBenefit(e)}
           keyboardType="numeric"
           placeholder={'$'}
         />

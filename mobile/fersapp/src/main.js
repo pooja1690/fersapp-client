@@ -15,7 +15,10 @@ import RequiredDatesContainer from './scenario-builder/required-dates/container'
 import SpecialProvisionContainer from './scenario-builder/special-provision/container';
 import MilitaryServiceContainer from './scenario-builder/military-service/container';
 import SalaryInfoContainer from './scenario-builder/salary-info/container';
-
+import SocialSecurityBenefitContainer from './scenario-builder/social-sec-benefit/container';
+import TSPContainer from './scenario-builder/thrift-savings-plan/container';
+import AnnualUnusedLeaveContainer from './scenario-builder/annual-unused-leave/container';
+import AdditionalOptionsContainer from './scenario-builder/additional-options/container';
 
 class MainScreen extends Component {
   static navigationOptions = {
@@ -65,7 +68,11 @@ const MainNavigator = createStackNavigator(
     RequiredDates: RequiredDatesContainer,
     SpecialProvision: SpecialProvisionContainer,
     MilitaryService: MilitaryServiceContainer,
-    SalaryInfo: SalaryInfoContainer
+    SalaryInfo: SalaryInfoContainer,
+    SocialSecBenefit: SocialSecurityBenefitContainer,
+    AnnualUnusedLeave: AnnualUnusedLeaveContainer,
+    ThriftSavingsPlan: TSPContainer,
+    AdditionalOptions: AdditionalOptionsContainer,
   },
   {
     initialRouteName: 'Main',
